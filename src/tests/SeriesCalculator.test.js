@@ -9,7 +9,6 @@ describe('SeriesCalculator Class', () => {
 
   test('serie(1) should return a valid number', () => {
     const result = calculator.serie(1);
-    // Podrías hacer una comparación específica si ya conoces el valor.
     expect(result).not.toBeNaN();
   });
 
@@ -20,7 +19,6 @@ describe('SeriesCalculator Class', () => {
 
   test('serie(3) should return 3.4 (approx)', () => {
     const result = calculator.serie(3);
-    // Basado en el ejemplo que hicimos anteriormente
     expect(result).toBeCloseTo(3.4, 5);
   });
 
