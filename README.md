@@ -1,71 +1,24 @@
-# Getting Started with Create React App
+A continuación, te presento una breve descripción de todo el ejercicio de código que he desarrollado:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Fórmula “Serie PTF”: La fórmula combina números primos, números triangulares y Fibonacci para calcular un término serie (𝑛).
+Formalmente, se definió como: serie(𝑛)=(4×primo(𝑛) − triangular(𝑛−1)) / fibonacci(𝑛+2).
+Donde: primo(𝑛) es el n-ésimo número primo, triangular(n−1) se basa en la fórmula (𝑛−1)𝑛 / 2, fibonacci(𝑛+2) es el número de Fibonacci en la posición n+2.
 
-## Available Scripts
+2. Class SeriesCalculator
+Con JavaScript, definí una clase que encapsula todos los métodos para: Calcular primos (isPrime, getPrime), Calcular números triangulares (getTriangular), Calcular Fibonacci (getFibonacci), y finalmente, aplicar la fórmula principal en serie(n). Este objeto se puede instanciar para obtener el resultado de la fórmula con distintos valores de 𝑛.
 
-In the project directory, you can run:
+3. Pruebas con Jest
+Se crearon 10 casos de prueba (para 𝑛=1 hasta n=10) que validan el método serie(n) de la clase SeriesCalculator. Se verificó que la función no arroje errores y, en algunos casos, comparamos resultados aproximados (por ejemplo, toBeCloseTo(3.4) para n=3).
 
-### `npm start`
+4. Tres componentes de React
+(1) InputForm (visual): un formulario con Bootstrap que recibe un número n.
+(2) Calculation (no visual): utiliza useEffect para llamar al método serie(n) de la clase SeriesCalculator y retorna el resultado mediante una prop onResult.
+(3) ResultDisplay (visual): muestra el resultado final en pantalla.
+Estos componentes se integran en un componente principal (App.jsx) que maneja el estado global y los conecta entre sí.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+En conjunto, este ejercicio demuestra:
+- Cómo crear una clase de cálculo que aplique la fórmula basada en primos, triangulares y Fibonacci,
+- Cómo implementar tests unitarios con Jest,
+- Cómo dividir la lógica y la presentación en React,
+- Y finalmente, cómo preparar y desplegar todo usando Node.js y los scripts de npm.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# Dev-Training-Sngular-OGM
